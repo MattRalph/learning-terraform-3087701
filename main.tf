@@ -56,7 +56,7 @@ resource "aws_instance" "blog" {
 
 # tutorial 3.7
 module "blog_sg" {
-  source  = "terraf"orm-aws-modules/security-group/aws"
+  source  = "terraform-aws-modules/security-group/aws"
   version = "4.13.0" # "4.17.2"
   name    = "blog" #"blog_new"
 
