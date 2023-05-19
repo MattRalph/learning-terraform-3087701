@@ -38,7 +38,7 @@ resource "aws_instance" "blog" {
 module "blog_sg" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "4.17.2"
-  name    = "blog_new"
+  name    = "blog" #"blog_new"
 
   vpc_id  = data.aws_vpc.default.id
 
@@ -50,6 +50,7 @@ module "blog_sg" {
 
 }
 
+/*
 # tutorial 3.4
 resource "aws_security_group" "blog" {
   name        = "blog"
@@ -88,3 +89,4 @@ resource "aws_security_group_rule" "blog_everything_out" {
 
   security_group_id = aws_security_group.blog.id
 }
+*/
